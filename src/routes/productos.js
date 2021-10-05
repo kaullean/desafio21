@@ -44,8 +44,6 @@ miRouter.post('/guardar',(req,res)=>{
         con el producto que se guardo
     */
     let productoIngresado = req.body;
-
-    console.log(productoIngresado.form);
     
     productoIngresado.price = parseInt(productoIngresado.price)
 
@@ -87,7 +85,6 @@ miRouter.delete('/borrar/:id', (req, res) => {
         Elimina un producto y responde con el producto eliminado
     */
     let idBuscado= parseInt(req.params.id);
-    console.log("ID BUSCADO",idBuscado);
     let data = productosService.eliminar(idBuscado)
     
     if(!data){

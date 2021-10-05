@@ -10,7 +10,9 @@ miRouter.use('/api/productos', productosRouter)
 
 
 miRouter.get('/', (req, res) =>{
+    console.log(req.session.usuario);
     const data = {
+        usuario:req.session.usuario,
         layout: 'index',
         hayDatos: false,
         productos:productosService.leer(),

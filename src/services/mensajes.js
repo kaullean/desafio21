@@ -8,7 +8,6 @@ class MensajesService {
     }
     async leer(){
         this.mensajes=JSON.parse(await fs.promises.readFile(this.filePath, 'utf-8'));
-        console.log(this.mensajes);
         return this.mensajes;
     }
     async guardar(){

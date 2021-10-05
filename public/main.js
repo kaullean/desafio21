@@ -35,8 +35,6 @@ function renderNuevoProducto(nuevoProducto){
 }
 
 socket.on('nuevoProducto', (data) =>{
-    console.log("recibi producto nuevo en el cliente");
-    
     renderNuevoProducto(data);
 })
 
