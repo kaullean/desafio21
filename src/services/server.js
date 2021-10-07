@@ -28,9 +28,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
     session({
         secret:"esto es secreto",
-        coockie:{ maxAge: 5000 },
+        cookie:{ maxAge: 5000 },
         saveUninitialized:true,
-        resave:false,
+        resave:true,
     })
 )
 app.get('/login',(req,res) =>{

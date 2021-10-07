@@ -10,14 +10,23 @@ miRouter.use('/api/productos', productosRouter)
 
 
 miRouter.get('/', (req, res) =>{
-    console.log(req.session.usuario);
-    const data = {
-        usuario:req.session.usuario,
+    let data = {
         layout: 'index',
         hayDatos: false,
         productos:productosService.leer(),
         mensajes:mensajesService.leer(),
     }
+    if(req.session.usuario)
+    {
+        data = {
+            usuario:req.session.usuario,
+            layout: 'index',
+            hayDatos: false,
+            productos:productosService.leer(),
+            mensajes:mensajesService.leer(),
+        }
+    }
+
     if(productosService.leer()){
         data.hayDatos=true;
     }
