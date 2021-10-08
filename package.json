@@ -26,7 +26,8 @@
     "express-session": "^1.17.2",
     "http": "0.0.1-security",
     "moment": "^2.29.1",
-    "node-fetch": "^2.6.1",
+    "mongoose": "^6.0.6",
+    "normalizr": "^3.6.1",
     "socket.io": "^4.1.3"
   }
 }

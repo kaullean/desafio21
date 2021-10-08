@@ -65,6 +65,6 @@ app.get('/logout',validateLogIn, (req, res) => {
   });
 
 /* Router */
-app.use('/',validateLogIn, miRouter)
+app.use('/', miRouter)
 
 export default myHTTPServer;
